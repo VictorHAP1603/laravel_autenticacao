@@ -56,7 +56,6 @@ class LoginController extends Controller
         } else {
             return redirect()->route('login')
             ->with('warning', 'E-mail e/ou senha inválidos');
-
         }
 
     }

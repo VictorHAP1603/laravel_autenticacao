@@ -7,9 +7,11 @@
         <h1>Tarefas</h1>
 
         <a href="/logout">Sair</a>
-
-
+        <br>
         <a href="{{ url('/tarefas/add') }}">Adicionar Tarefa</a>
+        <br>
+        <a href="{{ url('/config') }}">Configurações</a>
+
 
         @if (count($list) > 0)
             <table border="1" width="100%" >

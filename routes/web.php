@@ -37,7 +37,7 @@ DELETE  - /todo/{id}        - destroy       - todo.destroy  - DELETE O ITEM
 
 Route::prefix('/tarefas')->group(function () {
 
-    Route::get('/', 'TarefasController@index')->name('tarefas.index')->middleware('auth'); // Listagem de Tarefas
+    Route::get('/', 'TarefasController@index')->name('tarefas.index'); // Listagem de Tarefas
 
     Route::get('/add', 'TarefasController@add'); // tela de adicão de novas tarefas
     Route::post('/add', 'TarefasController@addAction'); // Ação de adição
@@ -50,3 +50,10 @@ Route::prefix('/tarefas')->group(function () {
     Route::get('/marcar/{id}', 'TarefasController@resolved'); // Marcar resolvido ou não
 
 });
+
+Route::prefix('/config')->group(function () {
+
+    Route::get('/', 'Admin\ConfigController@index');
+
+});
+
